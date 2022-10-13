@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="application.properties"/>
+    <bean id="Person1"
+          class="com.peaksoft.model.Person">
+        <property name="animal" ref="Animal1"/>
+        <property name="name" value="${person.name}"/>
+        <property name="age" value="${person.age}"/>
+    </bean>
+    <bean id="Animal1"
+          class="com.peaksoft.model.Panda">
+        <property name="name" value="${panda.name}"/>
+        <property name="age" value="${panda.age}"/>
+        <property name="weight" value="${panda.weight}"/>
+        <property name="color" value="${panda.color}"/>
+    </bean>
+
+    <bean id="Person2"
+          class="com.peaksoft.model.Person">
+        <property name="animal" ref="Animal2"/>
+        <property name="name" value="${person2.name}"/>
+        <property name="age" value="${person2.age}"/>
+    </bean>
+    <bean id="Animal2"
+          class="com.peaksoft.model.Lion">
+        <property name="name" value="${lion.name}"/>
+        <property name="age" value="${lion.age}"/>
+        <property name="weight" value="${lion.weight}"/>
+        <property name="color" value="${lion.color}"/>
+    </bean>
+
+    <bean id="Person3"
+          class="com.peaksoft.model.Person">
+        <property name="animal" ref="Animal3"/>
+        <property name="name" value="${person3.name}"/>
+        <property name="age" value="${person3.age}"/>
+    </bean>
+    <bean id="Animal3"
+          class="com.peaksoft.model.Giraffe">
+        <property name="name" value="${giraffe.name}"/>
+        <property name="age" value="${giraffe.age}"/>
+        <property name="weight" value="${giraffe.weight}"/>
+        <property name="color" value="${giraffe.color}"/>
+    </bean>
+</beans>
